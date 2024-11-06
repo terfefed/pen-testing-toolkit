@@ -1,0 +1,168 @@
+- Nikto v2.5.0/
++ Target Host: wreckage.me
++ Target Port: 443
++ GET /: Retrieved via header: 1.1 varnish.
++ GET /: Retrieved x-served-by header: cache-maa10237-MAA.
++ GET /: Retrieved access-control-allow-origin header: *.
++ GET /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options: 
++ GET /: Fastly CDN was identified by the x-timer header. See: https://www.fastly.com/: 
++ GET /: Uncommon header 'x-github-request-id' found, with contents: 7267:2BECC3:2CF862:36FFA9:672AFFB7.
++ GET /: Uncommon header 'x-served-by' found, with contents: cache-maa10237-MAA.
++ GET /: Uncommon header 'x-proxy-cache' found, with contents: MISS.
++ GET /: Uncommon header 'x-fastly-request-id' found, with contents: 8ce415bc8f29e26dee6c3bf62ec5db7facd32603.
++ GET /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/: 
++ GET /4ZQEhkH6.mdb: Uncommon header 'x-origin-cache' found, with contents: HIT.
+- Nikto v2.5.0/
++ Target Host: wreckage.me
++ Target Port: 443
++ GET /: Retrieved via header: 1.1 varnish.
++ GET /: Retrieved x-served-by header: cache-maa10222-MAA.
++ GET /: Retrieved access-control-allow-origin header: *.
++ GET /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options: 
++ GET /: Fastly CDN was identified by the x-timer header. See: https://www.fastly.com/: 
++ GET /: Uncommon header 'x-github-request-id' found, with contents: 7267:2BECC3:2CF862:36FFA9:672AFFB7.
++ GET /: Uncommon header 'x-fastly-request-id' found, with contents: 3effb2df0db2cc666b3e8e83fffb9ed8be0a533a.
++ GET /: Uncommon header 'x-proxy-cache' found, with contents: MISS.
++ GET /: Uncommon header 'x-served-by' found, with contents: cache-maa10222-MAA.
++ GET /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/: 
+- Nikto v2.5.0/
++ Target Host: wreckage.me
++ Target Port: 443
++ GET /: Retrieved via header: 1.1 varnish.
++ GET /: Retrieved x-served-by header: cache-maa10228-MAA.
++ GET /: Retrieved access-control-allow-origin header: *.
++ GET /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options: 
++ GET /: Fastly CDN was identified by the x-timer header. See: https://www.fastly.com/: 
++ GET /: Uncommon header 'x-served-by' found, with contents: cache-maa10228-MAA.
++ GET /: Uncommon header 'x-fastly-request-id' found, with contents: 47d040b9e6890246ddcaa51a505264803587a84a.
++ GET /: Uncommon header 'x-proxy-cache' found, with contents: MISS.
++ GET /: Uncommon header 'x-github-request-id' found, with contents: 7267:2BECC3:2CF862:36FFA9:672AFFB7.
++ GET /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/: 
+- Nikto v2.5.0/
++ Target Host: www.dvwa.co.uk
++ Target Port: 80
++ GET /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options: 
++ GET /: Uncommon header 'accept-ch' found, with contents: sec-ch-prefers-color-scheme.
++ GET /: Uncommon header 'x-request-id' found, with contents: 0e2b8013-1616-4188-a066-7b5a3abfbc40.
++ GET /: Uncommon header 'critical-ch' found, with contents: sec-ch-prefers-color-scheme.
++ GET /: Uncommon header 'x-adblock-key' found, with contents: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANDrp2lz7AOmADaN8tA50LsWcjLFyQFcb/P2Txc58oYOeILb3vBw7J6f4pamkAQVSQuqYsKx3YzdUHCvbVZvFUsCAwEAAQ==_qy3ZMwtSJV9gRz46N2mugGHtBEZp7J7bCXAXkr+aeZUqgfOViUYnQdSBv1IWVoEH2bWXN7M+ubJ5hEGOg80/6g==.
++ GET /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/: 
++ GET /: Cookie parking_session created without the httponly flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies: 
++ GET /robots.txt: Entry '/?*/' is returned a non-forbidden or redirect HTTP code (200). See: https://portswigger.net/kb/issues/00600600_robots-txt-file: 
++ GET /robots.txt: Entry '/_zc/' is returned a non-forbidden or redirect HTTP code (200). See: https://portswigger.net/kb/issues/00600600_robots-txt-file: 
++ GET /robots.txt: contains 3 entries which should be manually viewed. See: https://developer.mozilla.org/en-US/docs/Glossary/Robots.txt: 
++ GET Multiple index files found: /index.php7, /index.jsp, /index.htm, /index.do, /index.asp, /index.html, /index.shtml, /index.aspx, /index.jhtml, /index.php4, /index.php3, /index.pl, /index.xml, /default.aspx, /index.cfm, /index.php5, /index.php, /default.htm, /index.cgi, /default.asp.
++ HEAD /wwwdvwaco.tgz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /backup.war: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.co.zip: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.co.uk.tar.lzma: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /backup.tar.lzma: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwacouk.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.co.uk.tar.bz2: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www_dvwa_co_uk.tar: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /database.zip: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dvwa.co.uk.sql: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /site.jks: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.co.uk.alz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /199.59.243.227.tar: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /uk.tgz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /co.tar.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.egg: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dvwa.co.uk.egg: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /site.tar.bz2: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwaco.tar: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dvwa.co.uk.alz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /backup.zip: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /199.59.243.227.pem: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwacouk.egg: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dump.tar.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /co.egg: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwaco.tar.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /database.jks: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /backup.tar.bz2: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www_dvwa_co_uk.pem: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.sql: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.co.uk.tar.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www_dvwa_co_uk.cer: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /site.pem: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dvwa.tar.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /site.tgz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.co.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /199.59.243.227.cer: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwacouk.zip: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwaco.jks: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /site.sql: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.zip: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.co.uk.war: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /database.war: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /uk.tar.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /co.tgz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.co.egg: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.tar.lzma: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dvwa.co.uk.pem: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /199.59.243.227.zip: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.tar.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwaco.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /database.pem: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.co.uk.egg: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /uk.egg: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /site.war: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /database.tar.bz2: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www_dvwa_co_uk.zip: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwaco.sql: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.alz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwa.zip: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /archive.sql: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwacouk.alz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /uk.tar.lzma: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwaco.war: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.egg: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /archive.tar.bz2: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /199.59.243.227.jks: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.jks: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dvwa.co.uk.jks: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.tgz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dump.cer: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwaco.egg: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www_dvwa_co_uk.jks: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dump.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwaco.tar.bz2: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dump.alz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dvwa.co.uk.cer: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.cer: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwaco.zip: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /uk.pem: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /co.cer: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /archive.tar.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /archive.egg: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.co.pem: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /site.egg: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /uk.war: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /database.alz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dvwa.tar: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dvwa.zip: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwa.egg: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dump.zip: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dvwa.co.uk.tgz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.co.uk.tgz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /backup.jks: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dump.tar: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /co.tar.lzma: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /backup.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.co.alz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dvwa.alz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dvwa.co.uk.tar.bz2: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwa.tar.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dvwa.gz: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /wwwdvwacouk.pem: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.dvwa.tar: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /site.tar.lzma: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dvwa.cer: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /co.pem: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /uk.cer: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /co.war: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /database.sql: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /www.war: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/data/definitions/530.html: 
++ HEAD /dvwa.co.uk.war: Potentially interesting backup/cert file found. . See: https://cwe.mitre.org/da- Nikto v2.5.0/

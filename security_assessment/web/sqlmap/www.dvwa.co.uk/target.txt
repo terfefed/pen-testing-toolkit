@@ -1,0 +1,1 @@
+http://www.dvwa.co.uk/ (GET)  # /usr/bin/sqlmap -u http://www.dvwa.co.uk/ --batch --random-agent --level 1 --risk 1 --timeout 60 --output-dir security_assessment/web/sqlmap
