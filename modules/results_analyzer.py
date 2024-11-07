@@ -1,8 +1,8 @@
-# modules/results_analyzer.py
 import os
 import json
 import re
 from datetime import datetime
+import subprocess
 
 class ResultsAnalyzer:
     def __init__(self, output_dir):
@@ -10,28 +10,29 @@ class ResultsAnalyzer:
         self.web_dir = os.path.join(output_dir, 'web')
         self.network_dir = os.path.join(output_dir, 'network')
         self.report_dir = os.path.join(output_dir, 'reports')
-        
+        self.timeout = 300
+
     def analyze_nikto_results(self):
-        """Analyze Nikto scan results"""
         nikto_file = os.path.join(self.web_dir, 'nikto_scan.txt')
         findings = []
         
         if os.path.exists(nikto_file):
-            with open(nikto_file, 'r') as f:
-                content = f.read()
-                # Extract vulnerabilities
-                vulns = re.findall(r'\+ (OSVDB-\d+:.+)', content)
-                for vuln in vulns:
-                    findings.append({
-                        'tool': 'Nikto',
-                        'type': 'Web Vulnerability',
-                        'description': vuln,
-                        'severity': self._determine_severity(vuln)
-                    })
+            try:
+                with open(nikto_file, 'r') as f:
+                    content = f.read()
+                    vulns = re.findall(r'\+ (OSVDB-\d+:.+)', content)
+                    for vuln in vulns:
+                        findings.append({
+                            'tool': 'Nikto',
+                            'type': 'Web Vulnerability',
+                            'description': vuln,
+                            'severity': self._determine_severity(vuln)
+                        })
+            except Exception as e:
+                print(f"Error reading Nikto results: {str(e)}")
         return findings
     
     def analyze_sqlmap_results(self):
-        """Analyze SQLMap results"""
         sqlmap_dir = os.path.join(self.web_dir, 'sqlmap')
         findings = []
         
@@ -39,19 +40,21 @@ class ResultsAnalyzer:
             for root, dirs, files in os.walk(sqlmap_dir):
                 for file in files:
                     if file.endswith('.log'):
-                        with open(os.path.join(root, file), 'r') as f:
-                            content = f.read()
-                            if 'SQL injection point' in content:
-                                findings.append({
-                                    'tool': 'SQLMap',
-                                    'type': 'SQL Injection',
-                                    'description': 'SQL injection vulnerability found',
-                                    'severity': 'High'
-                                })
+                        try:
+                            with open(os.path.join(root, file), 'r') as f:
+                                content = f.read()
+                                if 'SQL injection point' in content:
+                                    findings.append({
+                                        'tool': 'SQLMap',
+                                        'type': 'SQL Injection',
+                                        'description': 'SQL injection vulnerability found',
+                                        'severity': 'High'
+                                    })
+                        except Exception as e:
+                            print(f"Error reading SQLMap results: {str(e)}")
         return findings
     
     def analyze_nmap_results(self):
-        """Analyze Nmap scan results"""
         nmap_file = os.path.join(self.network_dir, 'nmap_scan.xml')
         findings = []
         
@@ -80,7 +83,6 @@ class ResultsAnalyzer:
         return findings
     
     def _determine_severity(self, finding):
-        """Determine severity of a finding"""
         high_indicators = ['sql injection', 'remote code execution', 'rce', 'xss', 'csrf']
         medium_indicators = ['information disclosure', 'directory listing', 'deprecated']
         
@@ -94,7 +96,6 @@ class ResultsAnalyzer:
         return 'Low'
     
     def _determine_port_severity(self, service):
-        """Determine severity of open ports based on service"""
         critical_services = ['ms-sql', 'mysql', 'oracle', 'telnet', 'ftp']
         high_risk_services = ['ssh', 'rdp', 'vnc', 'smtp']
         
@@ -106,13 +107,11 @@ class ResultsAnalyzer:
         return 'Medium'
     
     def generate_report(self):
-        """Generate comprehensive security report"""
         findings = []
         findings.extend(self.analyze_nikto_results())
         findings.extend(self.analyze_sqlmap_results())
         findings.extend(self.analyze_nmap_results())
         
-        # Count findings by severity
         severity_count = {'Critical': 0, 'High': 0, 'Medium': 0, 'Low': 0}
         for finding in findings:
             severity_count[finding['severity']] = severity_count.get(finding['severity'], 0) + 1
@@ -126,18 +125,20 @@ class ResultsAnalyzer:
             'findings': findings
         }
         
-        # Generate HTML report
         html_report = self._generate_html_report(report)
         report_file = os.path.join(self.report_dir, f'security_report_{datetime.now().strftime("%Y%m%d_%H%M%S")}.html')
         
-        with open(report_file, 'w') as f:
-            f.write(html_report)
+        try:
+            with open(report_file, 'w') as f:
+                f.write(html_report)
+        except Exception as e:
+            print(f"Error generating report: {str(e)}")
+            return None
         
         print(f"\n[+] Report generated: {report_file}")
         return report_file
     
     def _generate_html_report(self, report):
-        """Generate HTML report"""
         html = f"""
         <!DOCTYPE html>
         <html>
@@ -187,7 +188,6 @@ class ResultsAnalyzer:
                 <h2>Detailed Findings</h2>
         """
         
-        # Sort findings by severity
         severity_order = {'Critical': 0, 'High': 1, 'Medium': 2, 'Low': 3}
         sorted_findings = sorted(report['findings'], 
                                key=lambda x: severity_order.get(x['severity'], 999))
@@ -210,17 +210,15 @@ class ResultsAnalyzer:
         
         return html
 
-# Add to main.py
 def analyze_results(output_dir):
-    """Analyze scan results and generate report"""
     print("\n[+] Analyzing scan results...")
     analyzer = ResultsAnalyzer(output_dir)
     report_file = analyzer.generate_report()
     print(f"[+] Analysis complete! Report saved to: {report_file}")
     
-    # Open report in default browser
     try:
         import webbrowser
         webbrowser.open(report_file)
     except:
         pass
+
