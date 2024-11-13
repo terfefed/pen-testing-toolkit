@@ -40,3 +40,4 @@ scans/
 # OS specific
 .DS_Store
 Thumbs.db
+security_assessment/
