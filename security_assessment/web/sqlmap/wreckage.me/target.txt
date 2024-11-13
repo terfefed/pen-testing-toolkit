@@ -1,1 +1,0 @@
-https://wreckage.me/ (GET)  # /usr/bin/sqlmap -u https://wreckage.me/ --batch --random-agent --level 1 --risk 1 --timeout 60 --output-dir security_assessment/web/sqlmap
